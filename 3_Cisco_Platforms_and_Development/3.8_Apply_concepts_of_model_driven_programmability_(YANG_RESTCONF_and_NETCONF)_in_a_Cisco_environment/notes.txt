@@ -76,4 +76,4 @@ RESTCONF:
 - Accept: application/yang-data+json
 - Content-Type: application/yang-data+json
 
-- "restconf; http server; http auth local; http secure-server;" starting restconf
+- "restconf; ip http server; ip http auth local; http secure-server;" starting restconf
