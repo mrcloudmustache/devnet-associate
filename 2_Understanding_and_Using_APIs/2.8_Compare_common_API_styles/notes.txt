@@ -5,4 +5,7 @@ https://apihandyman.io/do-you-really-know-why-you-prefer-rest-over-rpc/
 Synchronous vs Asynchronous:
 https://stackoverflow.com/questions/36213948/what-is-the-difference-between-asynchronous-calls-and-callbacks
 
+Synchronous - If an API call is synchronous, it means that code execution will block (or wait) for the API call to return before continuing. 
+Asynchronous - Asynchronous calls do not block (or wait) for the API call to return from the server. Execution continues on in your program, and when the call returns from the server, a "callback" function is executed.
+
 

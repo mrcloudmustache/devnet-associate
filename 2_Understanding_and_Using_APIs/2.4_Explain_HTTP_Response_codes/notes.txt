@@ -5,8 +5,17 @@ Response Codes
     204 - Empty response
 3XX Redirects
 4XX Client Errors
-    400 - Invalid syntax
-    401 - Unauthorized
-    403 - Forbidden
-    404 - Not Found
+    400 - Invalid syntax - The server could not understand the request due to invalid syntax
+    401 - Unauthorized -  The client must authenticate itself to get the requested response.
+    403 - Forbidden - The client does not have access rights to the content; that is, it is unauthorized,
+    404 - Not Found - The server can not find the requested resource
+    405 - Method Not Allowed - The request method is known by the server but has been disabled and cannot be used.
 5XX Server Errors
+    500 - Internal Server Error - The server has encountered a situation it doesn't know how to handle
+    501 - Not Implemented
+    502 - Bad Gateway
+    503 - Service Unavailable 
+
+
+Link:
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
