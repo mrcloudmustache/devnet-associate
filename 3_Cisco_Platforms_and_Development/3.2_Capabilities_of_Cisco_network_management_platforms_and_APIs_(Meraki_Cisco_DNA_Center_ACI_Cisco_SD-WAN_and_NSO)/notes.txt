@@ -22,6 +22,8 @@ Organizations > Networks > Devices
     - RESTFul API
     - HTTPs
 
+## Meraki SDK - https://github.com/meraki/dashboard-api-python/
+
 # ACI (Management for datacenters)
 
 ## Nexus
@@ -73,6 +75,18 @@ Organizations > Networks > Devices
             - Contracts
                 Enable connectivity between Devices
             - Filters
+- ACI Object Model
+    - Root uni
+    - parent child relationship
+    - Mangement information tree
+1. REST API
+2. Cobra SDK Includes all features. Only use for advanced projects.
+    1. ACI-Corbra
+    1. ACI-Model
+3. ACIToolkit
+
+ACI Docs: https://developer.cisco.com/site/aci/
+
 
 Sandbox: https://devnetsandbox.cisco.com/RM/Diagram/Index/5a229a7c-95d5-4cfd-a651-5ee9bc1b30e2?diagramType=Topology
 
