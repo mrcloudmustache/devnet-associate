@@ -24,7 +24,7 @@ Set-Cookie: __cfduid=d279ef5bb052a488b087a72c7a902bc751592396878; expires=Fri, 1
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: GET
 Cache-Control: no-cache, must-revalidate
-Expires: Sat, 26 Jul 1997 05:00:00 GMT
+Expires: Sat, 26 Jul 1997 05:00:00 GMT 
 Vary: User-Agent
 CF-Cache-Status: DYNAMIC
 cf-request-id: 0363d92a750000f3ef0db09200000001
@@ -35,3 +35,8 @@ Content-Encoding: gzip
 ######## Body ##################
 
 { "type": "success", "value": { "id": 282, "joke": "John Norris can skeletize a cow in two minutes.", "categories": [] } }
+
+# REST Constraints Cachable Headers
+Last Modified:
+Cache Control:
+Last Modified

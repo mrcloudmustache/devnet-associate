@@ -1,0 +1,20 @@
+link: http://jb.gg/book/codereview
+link: https://blog.jetbrains.com/upsource/tag/code-review-workflows/
+
+principles
+- gateway review
+- knowledge sharing
+- early design feedback
+
+- anti-patterns
+
+benefits
+- find problems/bugs
+- ensure code meets standards
+- share knowledge
+- check code is understandable
+- ensure code does what it's supposed to do
+- collaborate on design
+- evolve application code
+
+

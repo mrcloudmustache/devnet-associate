@@ -54,3 +54,13 @@ Disadvantages
 
 When to use it
 - Lean methods often work best in small projects with a short time frame, as Lean teams are usually quite small, and bigger projects require multiple teams. While not impossible, this can be difficult to manage effectively on a larger, more complex project.
+
+SDLC Models
+- Waterfall Model
+- Agile
+- Lean 
+- Iterative
+- Iterative Model
+- Spiral Model
+- V-Model
+- Big Bang Model

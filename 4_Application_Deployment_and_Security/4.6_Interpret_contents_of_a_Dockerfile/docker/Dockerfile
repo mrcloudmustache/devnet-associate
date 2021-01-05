@@ -1,8 +1,8 @@
 #specify the os for the docker
-FROM ubuntu:18:04
+FROM ubuntu:18.04
 
 # specify the maintainer
-MAINTAINER Pulkit Gupta "pulkitgupta2k@gmail.com"
+LABEL James Thomas "mrcloudmustache@gmail.com"
 
 # commands to install pip3 in the container
 RUN apt-get update -y && apt-get install -y python3-pip python3-dev

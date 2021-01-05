@@ -17,3 +17,14 @@ Data in Rest:
     - SQL server
         - Master Key
         - Slave Key
+
+# Linux create environment variable
+export CISCOUSERNAME='cisco'
+
+# Linux view environment variable
+echo CISCOUSERNAME
+
+# Install dotenv
+pip3 install python-dotenv
+
+
