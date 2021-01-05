@@ -1,20 +1,25 @@
 Response Codes
 
 1XX Informational Responses
+    100 - Continue - The server received the request and is in the process of giving a response
 2XX Successful Responses
+    200 - OK - The request is fulfilled
     204 - Empty response
 3XX Redirects
+    301 - Moved permanently - The resource has been permanently moved to a new location.
+    302 - Redirect move temporaily - Same as 301 but the new location is temporary. The client should issue a new request to the resource, the application should not up it's referecences.
+    304 - Not modifed
 4XX Client Errors
-    400 - Invalid syntax - The server could not understand the request due to invalid syntax
+    400 - Invalid syntax/Bad Request - The server could not understand the request due to invalid syntax
     401 - Unauthorized -  The client must authenticate itself to get the requested response.
     403 - Forbidden - The client does not have access rights to the content; that is, it is unauthorized,
     404 - Not Found - The server can not find the requested resource
-    405 - Method Not Allowed - The request method is known by the server but has been disabled and cannot be used.
+    405 - Method Not Allowed - The request method is known by the server, however the server does not allow that method for the resource requested. 
 5XX Server Errors
     500 - Internal Server Error - The server has encountered a situation it doesn't know how to handle
-    501 - Not Implemented
-    502 - Bad Gateway
-    503 - Service Unavailable 
+    501 - Method Not Implemented - Te request method is invalid. Could be caused by a typing error such as Get versus GET
+    502 - Bad Gateway - The proxy or gateway indicated that it received a bad responce from teh upstream server.
+    503 - Service Unavailable - The server cannot respond due to overloading or maintenance.
 
 
 Link:
