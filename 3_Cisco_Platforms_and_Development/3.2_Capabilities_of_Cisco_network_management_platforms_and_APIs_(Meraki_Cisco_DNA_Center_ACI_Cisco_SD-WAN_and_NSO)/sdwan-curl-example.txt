@@ -3,6 +3,10 @@ curl -c - -X POST -k https://sandbox-sdwan-1.cisco.com/j_security_check \
 -H 'Content-type: application/x-www-form-urlencoded' \
 -d 'j_username=devnetuser&j_password=RG!_Yw919_83'
 
+curl -c - -X GET -k https://sandbox-sdwan-1.cisco.com/j_security_check \
+-H 'Content-type: application/x-www-form-urlencoded' \
+-d 'j_username=devnetuser&j_password=RG!_Yw919_83'
+
 # Get devices
 curl -X GET -k https://sandbox-sdwan-1.cisco.com/dataservice/device \
 -H 'Cookie: JESSIONID=LAzUh_lgI-rKzgnmj5R38InAcMLdKuHfXB5BE7mG.81ac6722-a226-4411-9d5d-45c0ca7d567b'
