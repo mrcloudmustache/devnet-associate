@@ -1,0 +1,64 @@
+Cisco DNA Center 
+
+- Get list of devices using Curl
+- Get list of devices using Python requests module
+
+# Authentication
+
+curl -v -L --request POST  \
+--url https://sandboxdnac2.cisco.com/api/system/v1/auth/token \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic ZGV2bmV0dXNlcjpDaXNjbzEyMyE=' \
+--header 'Accept: application/json'
+
+{"Token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1ZjhlYjhhZDc1MTYxMjRlODczYTg0YmYiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVlNWE0MzI2NzUxNjEyMDBjYzRhYzk2MyJdLCJ0ZW5hbnRJZCI6IjVlNWE0MzI1NzUxNjEyMDBjYzRhYzk1YyIsImV4cCI6MTYxMDU0NzQxNCwiaWF0IjoxNjEwNTQzODE0LCJqdGkiOiI3M2Y3NTcxMy03MzA3LTRmNDYtYTIxOC0zNzQ5YmI0ZDhhMzMiLCJ1c2VybmFtZSI6ImRldm5ldHVzZXIifQ.xESXW1n68YGlsky1QKIShy21Dfd5s7b0WwlMrhahqpg_TMn75m7SbpsbEpiS1r4GUzJPqiwx_rWmcgmpYM1TjhoEIn8Di7PTTcmr-6yoeIaK36ZNhP9ECprlvn9NmdWWiEpF6VjB4ngR4kYLekuVjEliG-z1t1RkfDdSBAauZ4lJdbeLyqq3hBGkfbRkfe2uyrvvBfSVOsmjNqhpgJOwdzANmIQo0o_gAESOwpybJ2rx2Ky2A16jPb7fakO32dB4chmbESaV9e6nGr0doMfVIQzWVRwWbAY3TFn66PzVFYptzcVSaGkZek35t-jCKJd6B6QRjUKj1TUoGkXN9wVvfw"}
+
+# Get Device List
+
+curl -L --request GET \
+--url https://sandboxdnac2.cisco.com/api/v1/network-device \
+--header 'x-auth-Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1ZjhlYjhhZDc1MTYxMjRlODczYTg0YmYiLCJhdXRoU291cmNlIjoiaW50ZXJuYWwiLCJ0ZW5hbnROYW1lIjoiVE5UMCIsInJvbGVzIjpbIjVlNWE0MzI2NzUxNjEyMDBjYzRhYzk2MyJdLCJ0ZW5hbnRJZCI6IjVlNWE0MzI1NzUxNjEyMDBjYzRhYzk1YyIsImV4cCI6MTYxMDU0NzQxNCwiaWF0IjoxNjEwNTQzODE0LCJqdGkiOiI3M2Y3NTcxMy03MzA3LTRmNDYtYTIxOC0zNzQ5YmI0ZDhhMzMiLCJ1c2VybmFtZSI6ImRldm5ldHVzZXIifQ.xESXW1n68YGlsky1QKIShy21Dfd5s7b0WwlMrhahqpg_TMn75m7SbpsbEpiS1r4GUzJPqiwx_rWmcgmpYM1TjhoEIn8Di7PTTcmr-6yoeIaK36ZNhP9ECprlvn9NmdWWiEpF6VjB4ngR4kYLekuVjEliG-z1t1RkfDdSBAauZ4lJdbeLyqq3hBGkfbRkfe2uyrvvBfSVOsmjNqhpgJOwdzANmIQo0o_gAESOwpybJ2rx2Ky2A16jPb7fakO32dB4chmbESaV9e6nGr0doMfVIQzWVRwWbAY3TFn66PzVFYptzcVSaGkZek35t-jCKJd6B6QRjUKj1TUoGkXN9wVvfw' | python -m json.tool
+
+
+# Add Device
+curl -L --request POST \
+--url https://sandboxdnac2.cisco.com/intent/api/v1/network-device \
+--header 'Content-type: application/json'
+--header 'Accept: application/json'
+--data '{
+    "cliTransport": "string",
+    "computeDevice": true,
+    "enablePassword": "string",
+    "extendedDiscoveryInfo": "string",
+    "httpPassword": "string",
+    "httpPort": "string",
+    "httpSecure": true,
+    "httpUserName": "string",
+    "ipAddress": [ "10.10.10.10" ],
+    "merakiOrgId": [ "string" ],
+    "netconfPort": "string",
+    "password": "supersecure",
+    "serialNumber": "string",
+    "snmpAuthPassphrase": "string",
+    "snmpAuthProtocol": "string",
+    "snmpMode": "string",
+    "snmpPrivPassphrase": "string",
+    "snmpPrivProtocol": "string",
+    "snmpROCommunity": "string",
+    "snmpRWCommunity": "string",
+    "snmpRetry": 0,
+    "snmpTimeout": 0,
+    "snmpUserName": "string",
+    "snmpVersion": "string",
+    "type": "COMPUTE_DEVICE",
+    "updateMgmtIPaddressList": [
+        {
+            "existMgmtIpAddress": "string",
+            "newMgmtIpAddress": "string"
+        }
+    ],
+    "userName": "string"
+}'
+
+
+
